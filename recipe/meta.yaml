@@ -12,10 +12,10 @@ source:
     - patches/0001-Remove-werror-from-compile-flags.patch
 
 build:
+  number: 0
   skip: True  # [not osx]
   skip: True  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
 
 requirements:
   build:
