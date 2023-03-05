@@ -35,7 +35,7 @@ requirements:
 test:
   imports:
     - CoreServices
-    - CoreServices.CarbonCore`
+    - CoreServices.CarbonCore
     - CoreServices.DictionaryServices
     - CoreServices.LaunchServices
     - CoreServices.Metadata
