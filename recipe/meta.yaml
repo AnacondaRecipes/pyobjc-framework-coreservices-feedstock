@@ -1,20 +1,20 @@
 {% set name = "pyobjc-framework-CoreServices" %}
-{% set version = "10.1" %}
+{% set version = "12.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 43d507f2b3d84a5aab808c3f67bf21fb6a7d1367d506e2e9877bf1cac9bad2eb
+  url: https://pypi.org/packages/source/p/pyobjc-framework-CoreServices/pyobjc_framework_coreservices-12.0.tar.gz
+  sha256: 36e0cb684d20c2ace81fde9829fd972a69463c51800fc1102a28118bfb804a0b
   patches:
     - patches/0001-Remove-werror-from-compile-flags.patch
 
 build:
   number: 0
-  skip: True  # [not osx]
-  skip: True  # [py<38]
+  skip: true  # [not osx]
+  skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -29,9 +29,9 @@ requirements:
     - wheel
   run:
     - python
-    - pyobjc-core >={{ version }}
-    - pyobjc-framework-fsevents >={{ version }}
-    - pyobjc-framework-cocoa >={{ version }}
+    - pyobjc-core >=12.0
+    - pyobjc-framework-fsevents >=12.0
+    - pyobjc-framework-cocoa >=12.0
 
 test:
   imports:
