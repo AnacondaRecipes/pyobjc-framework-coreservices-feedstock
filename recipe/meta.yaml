@@ -3,7 +3,7 @@
 {% set pypi_name = name|replace("-", "_")|lower %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
