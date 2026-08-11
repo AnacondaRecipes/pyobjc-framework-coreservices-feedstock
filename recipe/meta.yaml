@@ -1,14 +1,14 @@
 {% set name = "pyobjc-framework-CoreServices" %}
-{% set version = "12.1" %}
+{% set version = "12.2.1" %}
 {% set pypi_name = name|replace("-", "_")|lower %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ pypi_name[0] }}/{{ name }}/{{ pypi_name }}-{{ version }}.tar.gz
-  sha256: fc6a9f18fc6da64c166fe95f2defeb7ac8a9836b3b03bb6a891d36035260dbaa
+  sha256: b4f052acd7346afa6f5441d32a19faaf080c3441cfaafad40c9b9a485b664554
 
 build:
   number: 0
